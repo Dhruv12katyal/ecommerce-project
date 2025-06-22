@@ -34,10 +34,6 @@
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-container.flipped {
-    transform: rotateY(180deg);
-}
-
 .form-side {
     position: absolute;
     width: 100%;
@@ -55,13 +51,6 @@
     justify-content: flex-start;
 }
 
-.signup-form {
-    transform: rotateY(0deg);
-}
-
-.login-form {
-    transform: rotateY(180deg);
-}
 
 .form-header {
     text-align: center;
@@ -153,18 +142,6 @@
     font-size: 14px;
 }
 
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.form-checkbox {
-    width: 16px;
-    height: 16px;
-    accent-color: #667eea;
-}
-
 .forgot-link {
     color: #667eea;
     text-decoration: none;
@@ -241,40 +218,6 @@
     z-index: 2;
 }
 
-.social-login {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.social-btn {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px;
-    border: 2px solid #e2e8f0;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #475569;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.social-btn:hover {
-    border-color: #6366f1;
-    background: rgba(255, 255, 255, 1);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.social-icon {
-    width: 20px;
-    height: 20px;
-}
-
 .form-switch {
     text-align: center;
     margin-top: 16px;
@@ -304,23 +247,6 @@
 
 .form-row .form-group {
     flex: 1;
-}
-
-.terms-text {
-    color: #64748b;
-    font-size: 12px;
-    line-height: 1.4;
-    margin-top: 8px;
-    margin-bottom: 16px;
-}
-
-.terms-link {
-    color: #6366f1;
-    text-decoration: none;
-}
-
-.terms-link:hover {
-    text-decoration: underline;
 }
 
 @keyframes fadeInUp {

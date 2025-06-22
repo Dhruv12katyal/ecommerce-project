@@ -15,15 +15,30 @@ export class SellerAuthComponent {
   constructor(private seller: SellerService,
     private router: Router 
   ){}
+  authError:string = "";
+  showLogin:boolean = false;
+  ngOnInit(){
+    this.seller.reloadSeller();
+  }
   signUp(data:SignUp): void{
-    this.seller.userSignUp(data).subscribe((result) =>{
-      alert("sign up successful")
-      if(result){
-        this.router.navigateByUrl("/seller-home")
+    this.seller.userSignUp(data);
+  }
+
+  openLogIn(){
+    this.showLogin = true;
+  }
+
+  openSignUp(){
+    this.showLogin = false;
+  }
+  signIn(data:any){
+    this.authError =""
+    this.seller.userSignIn(data);
+    this.seller.islogInError.subscribe((error)=>
+    {
+      if(error){
+        this.authError = "Email or Password is not correct"
       }
-      console.log(result);
-      
     })
-    
   }
 }
