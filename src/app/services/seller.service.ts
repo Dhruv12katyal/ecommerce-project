@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { EventEmitter, Injectable } from '@angular/core';
+import { EventEmitter, Injectable} from '@angular/core';
 import { logIn, SignUp } from './data-type';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
@@ -41,7 +41,10 @@ export class SellerService {
           localStorage.setItem("seller", JSON.stringify(result.body));
           // alert("login successful")
           debugger;
-          this.router.navigate(['seller-home'])
+          this.router.navigateByUrl('/seller-home').then(() => {
+            console.log('Navigation to seller-home completed');
+            // this.cdr.detectChanges();
+          });
         }else{
           this.islogInError.emit(true);
         }

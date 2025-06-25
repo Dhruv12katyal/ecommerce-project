@@ -11,6 +11,104 @@
       "email": "katyalsomil43@gmail.com",
       "password": "somil123",
       "id": 2
+    },
+    {
+      "name": "peter",
+      "email": "peter@test.com",
+      "password": "peter123",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "name": "realme 14i",
+      "price": "30000",
+      "category": "mobiles",
+      "color": "white",
+      "description": "very good phone",
+      "image": "https://cdn1.smartprix.com/rx-irj1ZSFZm-w420-h420/realme-14-5g.webp",
+      "id": 1
+    },
+    {
+      "name": "poco x7",
+      "price": "25000",
+      "category": "mobile",
+      "color": "black",
+      "description": "Poco phone",
+      "image": "https://rukminim2.flixcart.com/image/750/900/xif0q/mobile/b/d/r/-original-imah8affgzcekrgn.jpeg?q=90&crop=false",
+      "id": 2
+    },
+    {
+      "name": "Nike Jordan 1",
+      "price": "15000",
+      "category": "Shoes",
+      "color": "Red",
+      "description": "Jordan 1 red color",
+      "image": "https://i.pinimg.com/736x/79/c5/74/79c5748a4ec7e6f34e6aa8133c971c1d.jpg",
+      "id": 3
+    },
+    {
+      "name": "HP Laptop",
+      "price": "50000",
+      "category": "Laptop",
+      "color": "black",
+      "description": "Hp laptop for student and professionals",
+      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
+      "id": 4
+    },
+    {
+      "name": "Nike Shoes",
+      "price": "3000",
+      "category": "Shoes",
+      "color": "Black",
+      "description": "Best shoes for Running",
+      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1eeaacc0-e07c-4024-a5f7-57f2fd23e8a2/air-max-270-g-golf-shoe-Z6vCfs.png",
+      "id": 5
+    },
+    {
+      "name": "Levies Jeans",
+      "price": "5000",
+      "category": "Jeans",
+      "color": "blue",
+      "description": "Confirmable jeans for man ",
+      "image": "https://www.filmibeat.com/wimg/desktop/2012/12/13548612746596.jpg",
+      "id": 6
+    },
+    {
+      "name": "Truck",
+      "price": "500",
+      "category": "Toys",
+      "color": "Red",
+      "description": "A toy for 5 year old child",
+      "image": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/Truck2_1400x.png?v=1662789388",
+      "id": 7
+    },
+    {
+      "name": "Noise Smart Watch",
+      "price": "2000",
+      "category": "Watch",
+      "color": "Black",
+      "description": "Noise smart watch for man and women both",
+      "image": "https://www.reliancedigital.in/medias/Noise-Colorfit-Pro-2-Smart-Watch-491900986-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1MDc0NXxpbWFnZS9qcGVnfGltYWdlcy9oYzkvaDdjLzk1OTE4MjA3NDY3ODIuanBnfDA3MjZlMzkzOTExYzMyNzk5Y2YzOTk0MWFkMjc5YjE5OTlkMDE4NzYzYTg1YzQ2YmNjZjMxYzc5ZDJiYjBlNDg",
+      "id": 8
+    },
+    {
+      "name": "Samsung m 40 a ",
+      "price": "550",
+      "category": "mobile",
+      "color": "white",
+      "description": "this is a Samsung product",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "id": 9
+    },
+    {
+      "name": "I phone 14",
+      "price": "100000",
+      "category": "mobile",
+      "color": "black",
+      "description": "An Apple Product",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "id": 10
     }
   ]
 }

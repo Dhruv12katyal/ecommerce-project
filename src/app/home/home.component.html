@@ -1,1 +1,41 @@
-<h1>gwdgsjd</h1>
+@if (popularProducts) {
+<ngb-carousel>
+	@for (item of popularProducts; track $index) {
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img class="product-img" [src]="item.image" alt="Random first slide" />
+		</div>
+		<div class="carousel-caption ">
+			<h3>{{item.name}}</h3>
+			<p>{{item.description}}</p>
+		</div>
+	</ng-template>
+	}
+</ngb-carousel>
+}
+<div class="product-list-wrapper mt-5 mb-5">
+	<h1>Trendy Products</h1>
+	<div class="row">
+		@for (item of trendyProducts; track $index) {
+		<div class="col-3">
+			<div class="product-item">
+				<img src="{{item.image}}" />
+
+				<div class="product-details">
+					<h6 class="name-head">{{item.name}}</h6>
+				</div>
+				<div class="product-price">
+					<h6 class="price-head">Price : {{item.price}}</h6>
+				</div>
+				<div class="product-color">
+					<h6 class="price-head">Color : {{item.color}}</h6>
+				</div>
+				<div class="product-footer">
+					<a href="">View Details</a>
+					<a href="">Add to Cart</a>
+				</div>
+			</div>
+		</div>
+	}	
+	</div>
+</div>
