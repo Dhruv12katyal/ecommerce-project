@@ -43,7 +43,6 @@ export class HeaderComponent {
       const element = query.target as HTMLInputElement;
       this.product.searchProduct(element.value).subscribe((data)=>
       {
-        console.log(data);
         this.searchResult= data;
       });      
     }
@@ -51,6 +50,10 @@ export class HeaderComponent {
 
    hideSearch(){
     this.searchResult=undefined
+  }
+
+  submitSearch(val:string){
+    this.router.navigate([`search/${val}`]);
   }
 
 }
