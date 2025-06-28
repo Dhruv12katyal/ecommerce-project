@@ -5,6 +5,10 @@ ul{
 .footer {
     padding: 10px;
     text-align: center;
+     width: 100%;
+  background: #fff;
+  /* Optional: add a border or shadow for separation */
+  border-top: 1px solid #000000;
 }
 .footer ul{
     list-style-type: none;

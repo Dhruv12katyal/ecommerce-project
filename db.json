@@ -110,5 +110,37 @@
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
       "id": 10
     }
+  ],
+  "user": [
+    {
+      "name": "Dhruv Katyal",
+      "email": "dhruvkatyal6@gmail.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "Dhruv Katyal",
+      "email": "dhruvkatyal6@gmail.com",
+      "password": "abc@123",
+      "id": 2
+    },
+    {
+      "name": "Dhruv Katyal",
+      "email": "dhruvkatyal6@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "name": "Dhruv Katyal",
+      "email": "dhruvkatyal6@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "name": "Somil",
+      "email": "katyalsomil43@gmail.com",
+      "password": "12345",
+      "id": 5
+    }
   ]
 }
