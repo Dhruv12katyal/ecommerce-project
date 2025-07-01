@@ -141,6 +141,12 @@
       "email": "katyalsomil43@gmail.com",
       "password": "12345",
       "id": 5
+    },
+    {
+      "name": "Peter",
+      "email": "peter@test.com",
+      "password": "abc123",
+      "id": 6
     }
   ]
 }
