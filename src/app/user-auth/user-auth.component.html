@@ -1,5 +1,5 @@
 <div class="auth-container">
-  @if (true) {
+  @if (!showLogin) {
   <div class="form-wrapper">
     <div class="form-container" id="formContainer">
       <form #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)">
@@ -57,7 +57,7 @@
           <div class="form-switch">
             <p class="switch-text">
               Already have an account?
-              <span class="switch-link" >Sign in</span>
+              <span class="switch-link" (click)="openLogin()" >Sign in</span>
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@
   }
 
   <!--Login form-->
-  @if (false) {
+  @if (showLogin) {
   <div class="form-wrapper">
     <div class="form-container" id="formContainer">
       <form #userSignIn="ngForm" (ngSubmit)="signIn(userSignIn.value)">
@@ -82,7 +82,7 @@
             <span>or sign in with email</span>
           </div>
           <div class="error">
-            <!-- <p>{{authError}}</p> -->
+            <p>{{authError}}</p>
           </div>
           <div class="form-group">
             <label class="form-label">Email Address</label>
@@ -92,9 +92,22 @@
               name="email"
               class="form-input"
               placeholder="john@example.com"
+              
+              #email = "ngModel"
               required
+              email
             />
           </div>
+          @if (email.errors && email.touched) {
+          <ng-container>
+            @if (email.errors['required']) {
+            <p class="invalid-input">Email is required</p>
+            }
+            @if (email.errors['email'] && !email.errors['required']) {
+            <p class="invalid-input">Please enter a valid email address</p>
+            }
+          </ng-container>
+          }
 
           <div class="form-group password-group">
             <label class="form-label">Password</label>
@@ -104,23 +117,14 @@
               name="password"
               class="form-input"
               placeholder="Enter your password"
+              minlength="2"
+              maxlength="20"
+              #password="ngModel"
               required
             />
-            <button type="button" class="password-toggle">
-              <svg
-                class="password-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                <circle cx="12" cy="12" r="3" />
-              </svg>
-            </button>
           </div>
 
-          <button type="submit" class="submit-btn">Log in</button>
+          <button [disabled]="userSignIn.invalid" type="submit" class="submit-btn">Log in</button>
 
           <div class="form-switch">
             <p class="switch-text">

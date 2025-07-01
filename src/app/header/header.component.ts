@@ -42,7 +42,7 @@ export class HeaderComponent {
 
   logout(){
     localStorage.removeItem("seller");
-    this.router.navigateByUrl("/seller-home");
+    this.router.navigateByUrl("/seller-auth");
   }
 
    userLogout(){

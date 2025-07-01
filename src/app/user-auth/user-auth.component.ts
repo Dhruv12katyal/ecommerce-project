@@ -12,6 +12,8 @@ import { UserService } from '../services/user.service';
 export class UserAuthComponent {
 
   constructor(private user : UserService){}
+  showLogin:boolean=true;
+  authError: undefined|string;
   ngOnInit(){
     this.user.reloadUser()
   }
@@ -20,10 +22,22 @@ export class UserAuthComponent {
   }
 
   signIn(data:logIn){
-
+    this.authError ="";
+    this.user.userLogIn(data);
+    this.user.islogInError.subscribe((error)=>
+    {
+      if(error){
+        this.authError = "Email or Password is not correct"
+      }
+      setTimeout(() => {
+        this.authError = undefined;
+      }, 3000);
+    })
   }
-  openSignUp(){
-
+ openSignUp(){
+    this.showLogin=false
   }
-
+  openLogin(){
+this.showLogin=true;
+  }
 }
