@@ -16,6 +16,7 @@ export class HeaderComponent {
   menuType: string = "default";
   searchResult : undefined|product[];
   userName:string="";
+  cartItems:number =0;
   ngOnInit(){
     this.router.events.subscribe((val:any)=>
     {
@@ -31,14 +32,24 @@ export class HeaderComponent {
           let userData = userStore && JSON.parse(userStore);
           this.userName= userData.name;
           this.menuType='user';
+          this.product.getCartList(userData.id);
         }
        else{
         this.menuType= "default"
        }
       }
       
-    })
+    });
+
+    let cartData = localStorage.getItem('localCart');
+    if(cartData?.length){
+      this.cartItems = JSON.parse(cartData).length;
+    }
+    this.product.cartData.subscribe((items)=>{
+      this.cartItems = items.length;
+    });
   }
+
 
   logout(){
     localStorage.removeItem("seller");
@@ -47,7 +58,8 @@ export class HeaderComponent {
 
    userLogout(){
     localStorage.removeItem('user');
-    this.router.navigate(['/user-auth'])
+    this.router.navigate(['/user-auth']);
+    this.product.cartData.emit([]);
   }
 
   searchProduct(query:KeyboardEvent){

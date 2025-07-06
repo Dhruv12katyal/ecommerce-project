@@ -17,6 +17,12 @@
       "email": "peter@test.com",
       "password": "peter123",
       "id": 3
+    },
+    {
+      "name": "Vaishii",
+      "email": "Vaishii@gmail.com",
+      "password": "1234",
+      "id": 4
     }
   ],
   "products": [
@@ -109,6 +115,15 @@
       "description": "An Apple Product",
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
       "id": 10
+    },
+    {
+      "name": "Water bottle",
+      "price": "400",
+      "category": "Bottle",
+      "color": "Blue",
+      "description": "2 liter water bottle with good quality plastic",
+      "image": "data:image/jpeg;base64,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",
+      "id": 11
     }
   ],
   "user": [
@@ -119,34 +134,168 @@
       "id": 1
     },
     {
-      "name": "Dhruv Katyal",
-      "email": "dhruvkatyal6@gmail.com",
-      "password": "abc@123",
-      "id": 2
-    },
-    {
-      "name": "Dhruv Katyal",
-      "email": "dhruvkatyal6@gmail.com",
-      "password": "1234",
-      "id": 3
-    },
-    {
-      "name": "Dhruv Katyal",
-      "email": "dhruvkatyal6@gmail.com",
-      "password": "1234",
-      "id": 4
-    },
-    {
       "name": "Somil",
       "email": "katyalsomil43@gmail.com",
       "password": "12345",
-      "id": 5
+      "id": 2
     },
     {
       "name": "Peter",
       "email": "peter@test.com",
       "password": "abc123",
+      "id": 3
+    },
+    {
+      "name": "Vaishnavi",
+      "email": "Vaishii@gmail.com",
+      "password": "1234",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "name": "realme 14i",
+      "price": "30000",
+      "category": "mobiles",
+      "color": "white",
+      "description": "very good phone",
+      "image": "https://cdn1.smartprix.com/rx-irj1ZSFZm-w420-h420/realme-14-5g.webp",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 1,
+      "id": 7
+    },
+    {
+      "name": "HP Laptop",
+      "price": "50000",
+      "category": "Laptop",
+      "color": "black",
+      "description": "Hp laptop for student and professionals",
+      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 4,
+      "id": 8
+    },
+    {
+      "name": "Noise Smart Watch",
+      "price": "2000",
+      "category": "Watch",
+      "color": "Black",
+      "description": "Noise smart watch for man and women both",
+      "image": "https://www.reliancedigital.in/medias/Noise-Colorfit-Pro-2-Smart-Watch-491900986-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1MDc0NXxpbWFnZS9qcGVnfGltYWdlcy9oYzkvaDdjLzk1OTE4MjA3NDY3ODIuanBnfDA3MjZlMzkzOTExYzMyNzk5Y2YzOTk0MWFkMjc5YjE5OTlkMDE4NzYzYTg1YzQ2YmNjZjMxYzc5ZDJiYjBlNDg",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 8,
+      "id": 9
+    },
+    {
+      "name": "poco x7",
+      "price": "25000",
+      "category": "mobile",
+      "color": "black",
+      "description": "Poco phone",
+      "image": "https://rukminim2.flixcart.com/image/750/900/xif0q/mobile/b/d/r/-original-imah8affgzcekrgn.jpeg?q=90&crop=false",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 2,
+      "id": 10
+    }
+  ],
+  "orders": [
+    {
+      "name": "Dhruv Katyal",
+      "address": "Block no.12, House no.56, Geeta Colony",
+      "phone": "09654571900",
+      "payment": "cod",
+      "subtotal": 5000,
+      "tax": 500,
+      "discount": 250,
+      "total": 5250,
+      "id": 1
+    },
+    {
+      "name": "Dhruv Katyal",
+      "address": "S.no 137/4 , Sky Home PG, Narayan nagar, mulshi pune, hinjawadi PUNE, MAHARASHTRA 411057",
+      "phone": "09654571900",
+      "payment": "cod",
+      "subtotal": 5000,
+      "tax": 500,
+      "discount": 250,
+      "total": 5250,
+      "id": 2
+    },
+    {
+      "name": "peter",
+      "address": "Block no.12, House no.56, Geeta Colony",
+      "phone": "3232423535",
+      "payment": "card",
+      "userId": 3,
+      "subtotal": 5000,
+      "tax": 500,
+      "discount": 250,
+      "total": 5250,
+      "id": 3
+    },
+    {
+      "name": "Dhruv ",
+      "address": "Block no.12, House no.56, Geeta Colony",
+      "phone": "754534565",
+      "payment": "upi",
+      "userId": 1,
+      "subtotal": 107000,
+      "tax": 10700,
+      "discount": 5350,
+      "total": 112350,
+      "id": 4
+    },
+    {
+      "name": "peter",
+      "address": "delhi 6",
+      "phone": "4546465",
+      "payment": "card",
+      "userId": 3,
+      "subtotal": 155000,
+      "tax": 15500,
+      "discount": 7750,
+      "total": 162750,
+      "id": 5
+    },
+    {
+      "name": "Vaishii",
+      "address": "hinjewadi pune",
+      "phone": "557575467",
+      "payment": "cod",
+      "userId": 4,
+      "subtotal": 101200,
+      "tax": 10120,
+      "discount": 5060,
+      "total": 106260,
       "id": 6
+    },
+    {
+      "name": "Vaishnavi",
+      "address": "hinjewadi",
+      "phone": "435466",
+      "payment": "cod",
+      "userId": 4,
+      "subtotal": 800,
+      "tax": 80,
+      "discount": 40,
+      "total": 840,
+      "id": 7
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "payment": "",
+      "userId": 4,
+      "subtotal": 0,
+      "tax": 0,
+      "discount": 0,
+      "total": 0,
+      "id": 8
     }
   ]
 }

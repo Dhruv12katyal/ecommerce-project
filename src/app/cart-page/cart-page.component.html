@@ -1,0 +1,76 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h2 class="mb-4 text-theme text-center">🛒 My Cart</h2>
+          <table class="table table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Product</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of cartItems">
+                <td class="fw-semibold">{{item.name}}</td>
+                <td>
+                  <img [src]="item.image" alt="{{item.name}}" class="rounded" style="width: 100px;  object-fit: cover;">
+                </td>
+                <td class="text-success fw-bold">{{item.price | currency:'INR':'symbol'}}</td>
+                <td>{{item.quantity || 1}}</td>
+                <td class="fw-semibold">{{(item.price * (item.quantity || 1)) | currency:'INR':'symbol'}}</td>
+                <td>
+                  <button (click)="removeFromCart(item.id)" class="btn btn-outline-danger btn-sm" >
+                     Remove
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="cartItems?.length === 0" class="text-center py-4">
+            <h4>Your cart is empty.</h4>
+            <a routerLink="/" class="btn btn-primary mt-3">Go Shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card shadow-sm sticky-top" style="top: 100px;">
+        <div class="card-body">
+          <h4 class="mb-3 text-secondary">Order Summary</h4>
+          <ul class="list-group list-group-flush mb-3">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Subtotal</span>
+              <span class="fw-semibold">{{priceSummary.subTotal| currency:'INR':'symbol'}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Tax (10%)</span>
+              <span class="fw-semibold">{{priceSummary.tax| currency:'INR':'symbol'}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Discount (5%)</span>
+              <span class="fw-semibold text-success">-{{priceSummary.discount| currency:'INR':'symbol'}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center fs-5">
+              <span class="fw-bold">Total</span>
+              <span class="fw-bold text-primary">{{priceSummary.total| currency:'INR':'symbol'}}</span>
+            </li>
+          </ul>
+          <button (click)="goToCheckout()" class="btn btn-blueviolet w-100 py-2 fs-5">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <div class="empty-cart text-center py-5">
+    <h3>Your cart is empty.</h3>
+    <a routerLink="/" class="btn btn-primary mt-3">Go Shopping</a>
+  </div>
+</ng-template>

@@ -123,6 +123,16 @@
               required
             />
           </div>
+           @if (password.errors && password.touched) {
+          <ng-container>
+            @if (password.errors['required']) {
+            <p class="invalid-input">Password is required</p>
+            }
+            @if (password.errors['minlength'] && !password.errors['required']) {
+            <p class="invalid-input">Please enter a valid password</p>
+            }
+          </ng-container>
+          }
 
           <button [disabled]="userSignIn.invalid" type="submit" class="submit-btn">Log in</button>
 

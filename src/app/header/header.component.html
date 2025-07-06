@@ -1,6 +1,6 @@
 <nav class="nav bg-light p-2">
   <h1><a routerLink="/">E-COMM</a></h1>
-  <div *ngIf="menuType === 'default'" class="nav-search">
+  <div *ngIf="menuType !== 'seller'" class="nav-search">
     <input type="text" (keyup)="searchProduct($event)"
     #searchInput (blur)="hideSearch()" placeholder="Search for Products">
     <button (click)="submitSearch(searchInput.value)"> Search</button>
@@ -15,7 +15,7 @@
     <li><a routerLink="/seller-auth">Seller</a></li>
     <li><a routerLink="/">Home</a></li>
     <li><a routerLink="/user-auth">Login/SignUp</a></li>
-    <li><a href="#">Cart(0)</a></li>
+    <li><a href="#">Cart({{cartItems}})</a></li>
 </ul>
 <ul *ngSwitchCase="'seller'">
   <li><a routerLink="/seller-auth">Product List</a></li>
@@ -28,9 +28,10 @@
     <li><a routerLink="seller-auth">Seller</a></li>
     <li><a routerLink="">Home</a></li>
     <li><a>{{userName | titlecase}}</a></li>
+    <li><a routerLink="my-orders">My Orders</a></li>
     <li><a (click)="userLogout()" >Logout</a></li>
 
-    <li><a href="#">Cart(0)</a></li>
+    <li><a routerLink="cart-page">Cart({{cartItems}})</a></li>
   </ul>
 </div>
     </nav>

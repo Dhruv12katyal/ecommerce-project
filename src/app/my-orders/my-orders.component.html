@@ -1,0 +1,35 @@
+<div class="container py-5">
+  <h2 class="mb-4">My Orders</h2>
+  <div *ngIf="orders && orders.length; else noOrders">
+    <div class="card mb-4" *ngFor="let order of orders">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span><b>Order #{{order.id}}</b></span>
+      </div>
+      <div class="card-body">
+        <p><b>Name:</b> {{order.name}}</p>
+        <p><b>Address:</b> {{order.address}}</p>
+        <p><b>Phone:</b> {{order.phone}}</p>
+        <p><b>Payment:</b> {{order.payment | titlecase}}</p>
+        <!-- <div *ngIf="order.items && order.items.length">
+          <b>Items:</b>
+          <ul>
+            <li *ngFor="let item of order.items">
+              {{item.name}} (x{{item.quantity || 1}}) - {{item.price | currency:'INR':'symbol'}}
+            </li>
+          </ul>
+        </div> -->
+        <div class="order-summary mt-3">
+          <span>Subtotal: {{order.subtotal | currency:'INR':'symbol'}}</span> |
+          <span>Tax: {{order.tax | currency:'INR':'symbol'}}</span> |
+          <span>Discount: -{{order.discount | currency:'INR':'symbol'}}</span> |
+          <b>Total: {{order.total | currency:'INR':'symbol'}}</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noOrders>
+    <div class="alert alert-info text-center">
+      You have not placed any orders yet.
+    </div>
+  </ng-template>
+</div>

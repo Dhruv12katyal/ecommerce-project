@@ -19,7 +19,9 @@ export class SellerUpdateProductComponent {
     color: '',
     description: '',
     image: '',
-    id: 0
+    id: 0,
+    quantity: undefined,
+    productId: undefined
   };
   productMessage : undefined|string;
 

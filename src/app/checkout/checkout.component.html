@@ -1,0 +1,71 @@
+<div class="checkout-container py-5">
+  <div class="row justify-content-center">
+    <div class="message_p text-center">
+        <p>{{orderMessage}}</p>
+    </div>
+    <!-- Order Summary -->
+    <div class="col-lg-5 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-light">
+          <h4 class="mb-0">Order Summary</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush mb-3">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Subtotal</span>
+              <span class="fw-semibold">{{priceSummary.subTotal | currency:'INR':'symbol'}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Tax (10%)</span>
+              <span class="fw-semibold">{{priceSummary.tax | currency:'INR':'symbol'}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Discount (5%)</span>
+              <span class="fw-semibold text-success">-{{priceSummary.discount | currency:'INR':'symbol'}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center fs-5">
+              <span class="fw-bold">Total</span>
+              <span class="fw-bold text-primary">{{priceSummary.total | currency:'INR':'symbol'}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Shipping & Payment Form -->
+    <div class="col-lg-7 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-light">
+          <h4 class="mb-0">Shipping & Payment</h4>
+        </div>
+        <div class="card-body">
+          <form #checkoutForm="ngForm" (ngSubmit)="placeOrder(checkoutForm.value,checkoutForm)">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" name="name" class="form-control" ngModel required>
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <textarea id="address" name="address" class="form-control" ngModel required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control" ngModel required>
+            </div>
+            <div class="mb-3">
+              <label for="payment" class="form-label">Payment Method</label>
+              <select id="payment" name="payment" class="form-select" ngModel required>
+                <option value="cod">Cash on Delivery</option>
+                <option value="card">Credit/Debit Card</option>
+                <option value="upi">UPI</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-blueviolet w-100 py-2 fs-5">Place Order</button>
+          </form>
+          <div *ngIf="orderSuccess" class="alert alert-success mt-3">
+            Order placed successfully!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
